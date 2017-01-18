@@ -1,0 +1,10 @@
+{
+	"listeners:":[
+		{"proto":"http","port":8088,"mode":"select","threads":20}
+	],
+	"brokers":"127.0.0.1:9092",
+	"topic":"data",
+	"rdkafka.socket.max.fails":"3",
+	"rdkafka.socket.keepalive.enable":"true",
+	"blacklist":[]
+}
