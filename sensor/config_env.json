@@ -1,0 +1,26 @@
+{
+  "conf": {
+    "debug": 3,
+    "stdout": 1,
+    "syslog": 0,
+    "threads": 1,
+    "timeout": 40,
+    "max_snmp_fails": 2,
+    "max_kafka_fails": 2,
+    "sleep_main_thread": 5,
+    "sleep_worker_thread": 5,
+    "http_endpoint": "http://${HTTP_ENDPOINT}/data"
+  },
+  "sensors":
+  [
+    {
+      "timeout":5,
+      "sensor_name": "${SENSOR_NAME}",
+      "sensor_ip": "${SENSOR_IP}",
+      "monitors":
+      [
+          {"name": "usedMemory"  , "system": "free -m | grep Mem | awk '{print $3}'", "unit": "mbytes"}
+      ]
+    }
+  ]
+}
