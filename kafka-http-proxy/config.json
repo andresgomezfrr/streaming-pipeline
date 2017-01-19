@@ -1,10 +1,14 @@
 {
-	"listeners:":[
-		{"proto":"http","port":8088,"mode":"select","threads":20}
-	],
-	"brokers":"127.0.0.1:9092",
-	"topic":"data",
-	"rdkafka.socket.max.fails":"3",
-	"rdkafka.socket.keepalive.enable":"true",
-	"blacklist":[]
+  "listeners":[
+    {"proto":"http", "port": 2058, "num_threads":5, "mode":"epoll", "connection_timeout": 60, "per_ip_connection_limit": 0, "connection_limit": 2560, "topic":"data"}
+  ],
+  "brokers":"127.0.0.1",
+  "rdkafka.socket.max.fails":"3",
+  "rdkafka.socket.keepalive.enable":"true",
+  "rdkafka.queue.buffering.max.messages":"24916",
+  "rdkafka.queue.buffering.max.ms":"1000",
+  "rdkafka.message.send.max.retries":"0",
+  "rdkafka.retry.backoff.ms":"100",
+  "blacklist": [
+  ]
 }
