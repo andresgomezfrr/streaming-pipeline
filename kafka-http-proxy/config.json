@@ -1,8 +1,9 @@
 {
   "listeners":[
-    {"proto":"http", "port": 2058, "num_threads":5, "mode":"epoll", "connection_timeout": 60, "per_ip_connection_limit": 0, "connection_limit": 2560, "topic":"data"}
+    {"proto":"http", "port": 2058, "num_threads":5, "mode":"select", "connection_timeout": 60, "per_ip_connection_limit": 0, "connection_limit": 2560}
   ],
-  "brokers":"127.0.0.1",
+  "brokers":"127.0.0.1:9092",
+  "topic":"data",
   "rdkafka.socket.max.fails":"3",
   "rdkafka.socket.keepalive.enable":"true",
   "rdkafka.queue.buffering.max.messages":"24916",
