@@ -19,7 +19,12 @@
       "sensor_ip": "${SENSOR_IP}",
       "monitors":
       [
-          {"name": "usedMemory"  , "system": "free -m | grep Mem | awk '{print $3}'", "unit": "mbytes"}
+          {"name": "used_memory"  , "system": "free -m | grep Mem | awk '{print $3}'", "unit": "mbytes"},
+          {"name": "available_memory"  , "system": "free -m | grep Mem | awk '{print $7}'", "unit": "mbytes"},
+          {"name": "load_1"  , "system": "uptime | awk '{print $8}' | sed '$ s/.$//'", "unit": "load"},
+          {"name": "load_5"  , "system": "uptime | awk '{print $9}' | sed '$ s/.$//'", "unit": "load"},
+          {"name": "load_15"  , "system": "uptime | awk '{print $10}'", "unit": "load"},
+          {"name": "disk_used"  , "system": "df -h |grep none | awk '{print $5}' | sed '$ s/.$//'", "unit": "%"}
       ]
     }
   ]
