@@ -9,7 +9,12 @@
     "max_kafka_fails": 2,
     "sleep_main_thread": 5,
     "sleep_worker_thread": 5,
-    "http_endpoint": "http://${HTTP_ENDPOINT}/topics/data/messages?key=${SENSOR_NAME}"
+    "http_endpoint": "http://${HTTP_ENDPOINT}/topics/data/messages?key=${SENSOR_NAME}",
+    "http_max_total_connections":4,
+    "http_timeout": 10000,
+    "http_connttimeout": 3000,
+    "http_verbose": 0,
+    "rb_http_max_messages":512
   },
   "sensors":
   [
@@ -17,6 +22,8 @@
       "timeout":5,
       "sensor_name": "${SENSOR_NAME}",
       "sensor_ip": "${SENSOR_IP}",
+      "snmp_version": "2c",
+      "community":"public",
       "monitors":
       [
           {"name": "used_memory"  , "system": "free -m | grep Mem | awk '{print $3}'", "unit": "mbytes"},
