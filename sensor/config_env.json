@@ -9,7 +9,7 @@
     "max_kafka_fails": 2,
     "sleep_main_thread": 5,
     "sleep_worker_thread": 5,
-    "http_endpoint": "http://${HTTP_ENDPOINT}/data"
+    "http_endpoint": "http://${HTTP_ENDPOINT}/"
   },
   "sensors":
   [
