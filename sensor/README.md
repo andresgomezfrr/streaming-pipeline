@@ -11,3 +11,6 @@ docker run -it -e HTTP_ENDPOINT=localhost:8088 -e SENSOR_NAME=my-sensor-1 sensor
 ```
 
 Sensor repo: https://github.com/redBorder/rb_monitor
+
+
+Load Balancer: kschool-LB-2118706800.us-east-1.elb.amazonaws.com
