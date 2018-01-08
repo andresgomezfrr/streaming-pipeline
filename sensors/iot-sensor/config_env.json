@@ -8,12 +8,6 @@
     "sensors": {
         "Sensor 1": {
             "header":{"id": "sensor1","version": "v1.6"}
-        },
-        "Sensor 2": {
-             "header":{"id": "sensor2","version": "v1.6"}
-        },
-        "Sensor 3": {
-             "header":{"id": "sensor3","version": "v1.7"}
         }
     }
 }
