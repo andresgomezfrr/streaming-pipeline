@@ -12,21 +12,3 @@ cd kafka-pixy-v0.11.1-linux-amd64
 
 Repo: https://github.com/mailgun/kafka-pixy
 
-## n2kafka
-
-Install on CentOS
-
-```
-yum install -y epel-release
-```
-
-```
-rpm -ivh http://repo.redborder.com/redborder-repo-0.0.3-1.el7.rb.noarch.rpm
-```
-
-```
-yum install -y expat ncurses libpsl libev zlib libmicrohttpd libcurl librd0 librdkafka1 jansson yajl
-```
-
-
-kafka-http-proxy repo: https://github.com/redBorder/n2kafka
