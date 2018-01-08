@@ -1,0 +1,16 @@
+fields:
+  device:
+      type: mac
+      min: 00:00:00:00:00:11
+      max: 00:00:00:00:00:44
+  rssi:
+    type: integer
+    negative: true
+    min: 0
+    max: 80
+  id:
+    type: collection
+    values:
+      - sensor1
+  timestamp:
+    type: timestamp
