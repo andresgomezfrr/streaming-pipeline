@@ -93,6 +93,7 @@ public class BaseStreamTask implements StreamTask, InitableTask {
 
             message2send.put("timestamp", timestamp);
             message2send.put("device", message.get("device"));
+            message2send.put("sensor", key);
             message2send.put("rssi", message.get("rssi"));
 
             if (sensorData != null) {
@@ -112,7 +113,7 @@ public class BaseStreamTask implements StreamTask, InitableTask {
                     ));
                 } else {
                     log.info("Cache timeout, removing data from sensor [{}]", key);
-                    sensorData.remove(key);
+                    store.delete(key);
                 }
             } else {
                 log.info("Sending sensor data message {}", message2send);

@@ -3,6 +3,7 @@ FROM library/python:3
 RUN apt-get update
 RUN apt-get install -y gettext-base
 
+RUN ls
 RUN pip3 install paho-mqtt
 
 COPY config_env.json /

@@ -12,5 +12,6 @@ fields:
     type: collection
     values:
       - sensor1
+      - sensor2
   timestamp:
     type: timestamp
